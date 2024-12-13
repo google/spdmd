@@ -1,0 +1,33 @@
+# The options supported by SPDM are:
+# "RAW_BIT","SHA_256","SHA_384","SHA_512","SHA3_256","SHA3_384","SHA3_512","SM3_256" 
+option(
+    'minimum-spdm-measurement-hash',
+    type: 'string',
+    value: 'SHA_384',
+    description: 'The minimum requirement for SPDM measurement hash.'
+)
+
+option(
+    'spdm-mctp-i2c-binding-conf',
+    type: 'string',
+    value: '/var/run/mctp/mctp-i2c-binding.conf',
+    description: 'Default mctp-i2c-binding config file path.'
+)
+
+# The options supported by SPDM are:
+# "RSASSA_2048","RSASSA_3072","RSASSA_4096","RSAPSS_2048","RSAPSS_3072"
+# "RSAPSS_4096","ECDSA_P256","ECDSA_P384","ECDSA_P521","SM2_P256"
+option(
+    'minimum-spdm-asym-algo',
+    type: 'string',
+    value: 'ECDSA_P384',
+    description: 'The minimum requirement for SPDM .'
+)
+
+# 8086:0d93 qemu-emulated CXL device that supports SPDM-over-DOE
+option(
+    'spdm-doe-vid-did-list',
+    type: 'string',
+    value: '8086:0d93',
+    description: 'comma separated VID:DID of DOE devices that support SPDM'
+)

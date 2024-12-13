@@ -1,0 +1,19 @@
+[Unit]
+Description=Start Google spdmd daemon
+
+Wants=mctpd.service
+After=mctpd.service
+Wants=xyz.openbmc_project.EntityManager.service
+After=xyz.openbmc_project.EntityManager.service
+Wants=mctp-i2c.service
+After=mctp-i2c.service
+After=time-sync.target
+
+[Service]
+ExecReload=kill -s HUP $MAINPID
+ExecStart=@MESON_INSTALL_PREFIX@/bin/spdmd
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=time-sync.target

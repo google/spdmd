@@ -1,0 +1,13 @@
+option(
+    'tests',
+    type: 'feature',
+    value: 'enabled',
+    description: 'Disable Unit tests for spdm-wrapper'
+)
+
+option(
+    'spdm-debug-print',
+    type: 'feature',
+    value: 'disabled',
+    description: 'Enable spdm debug print to use debug print functions'
+)

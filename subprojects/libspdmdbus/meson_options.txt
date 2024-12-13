@@ -1,0 +1,6 @@
+option(
+    'tests',
+    type: 'feature',
+    value: 'disabled',
+    description: 'Disable Unit tests for spdm-wrapper'
+)

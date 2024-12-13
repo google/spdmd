@@ -1,0 +1,12 @@
+#pragma once
+
+#include <cstdint>
+#include <cstddef>
+
+constexpr const char* mesonInstallPrefix = "@MESON_INSTALL_PREFIX@";
+
+constexpr const char* DOEVidDidList = "@SPDMD_DOE_VID_DID_LIST@";
+constexpr const char* SpdmMeasurementHash = "@SPDM_MEASUREMENT_HASH@";
+constexpr const char* SpdmAsymAlgo = "@SPDM_ASYM_ALGO@";
+constexpr const char* SpdmdMctpI2cBindingConf = "@SPDMD_MCTP_I2C_BINDING_CONF@";
+
